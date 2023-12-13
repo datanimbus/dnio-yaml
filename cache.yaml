@@ -30,7 +30,8 @@ spec:
     spec:
       containers:
       - name: cache
-        image: cache:1.0.0
+        image: redis:5-alpine
+        imagePullPolicy: Always
         ports:
         - containerPort: 6379
         volumeMounts:

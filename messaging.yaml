@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: streaming
+  name: messaging
   namespace: __namespace__
 spec:
   type: ClusterIP
   selector:
-    app: streaming
+    app: messaging
   ports:
     - protocol: TCP
       port: 4222
@@ -15,21 +15,21 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: streaming
+  name: messaging
   namespace: __namespace__
 spec:
   replicas: 1 
   selector:
     matchLabels:
-      app: streaming
+      app: messaging
   template: 
     metadata:
       labels:
-        app: streaming
+        app: messaging
     spec:
       containers:
-      - name: streaming
-        image: nats-streaming:0.11.2
+      - name: messaging
+        image: nats-messaging:0.11.2
         args:
           - "-cid"
           - "datastack-cluster"
@@ -44,9 +44,9 @@ spec:
         ports:
           - containerPort: 4222
         volumeMounts:
-          - name: streaming-store
+          - name: messaging-store
             mountPath: /store
       volumes:
-        - name: streaming-store
+        - name: messaging-store
           hostPath:
             path: /mnt/store
