@@ -7,21 +7,23 @@ data:
   LOG_LEVEL: "info"
   DATA_STACK_NAMESPACE: "__namespace__"
   FQDN: "__FQDN__"
+
   # Mongo connection details
   MONGO_APPCENTER_URL: mongodb://__db_host__:__db_port__
   MONGO_AUTHOR_DBNAME: datastackConfig
   MONGO_AUTHOR_URL: mongodb://__db_host__:__db_port__
   MONGO_LOGS_URL: mongodb://__db_host__:__db_port__
   MONGO_LOGS_DBNAME: datastackLogs
-  MONGO_RECONN_TIME_MILLI: "1000"
-  MONGO_RECONN_TRIES: "21600"
+
   # Primarily used for DS
   MONGO_CONNECTION_POOL_SIZE: 5
+
   # STREAMING connection details
   STREAMING_CHANNEL: "datastack-cluster"
   STREAMING_HOST: "nats://streaming.__namespace__:4222"
   STREAMING_RECONN_ATTEMPTS: "500"
   STREAMING_RECONN_TIMEWAIT_MILLI: "500"
+
   # CACHE connection details
   # Either one of CACHE_CLUSTER or CACHE_* is required
   CACHE_CLUSTER: ""
@@ -29,10 +31,10 @@ data:
   CACHE_PORT: "6379"
   CACHE_RECONN_ATTEMPTS: "500"
   CACHE_RECONN_TIMEWAIT_MILLI: "500"
+
   # Docker
   DOCKER_REGISTRY_SERVER: "__docker_registry_server__"
-  # Encryption key
-  ENCRYPTION_KEY: "aVerySecureEncryption_key@!#$^^123"
+  
   #Session variables
   RBAC_USER_TOKEN_DURATION: "600"
   RBAC_USER_TOKEN_REFRESH: "true"
