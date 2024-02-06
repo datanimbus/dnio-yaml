@@ -50,3 +50,4 @@ data:
   RBAC_HB_INTERVAL: "60"
   RBAC_BOT_TOKEN_DURATION: "60"
   RBAC_USER_AUTH_MODES: "local"
+  RBAC_JWT_KEY: "__add_jwt_your_key_here__"
