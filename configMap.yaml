@@ -5,7 +5,7 @@ metadata:
   namespace: __namespace__
 data:
   LOG_LEVEL: "info"
-  DATA_STACK_NAMESPACE: "__namespace__"
+  DNIO_NAMESPACE: "__namespace__"
   FQDN: "__FQDN__"
 
   # Mongo connection details
